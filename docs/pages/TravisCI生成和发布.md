@@ -176,9 +176,18 @@ deploy:
 ```shell
 git add .
 git commit -m '初步完成'
-git push git@github.com:{Username}/{Repo}.git master
+git push -f git@github.com:{Username}/{Repo}.git master
 
 # 比如
-# git push git@github.com:Tsanfer/VuePress-GithubPages-TravisCI.git master
+# git push -f git@github.com:Tsanfer/VuePress-GithubPages-TravisCI.git master
 ```
 
+
+
+## 完成
+
+如果 Travis CI 触发成功构建没有问题的话就完成了
+
+![](https://cdn-image.tsanfer.xyz/img/20200316183049.png)
+
+> 本文由[Tsanfer's Blog](https://tsanfer.xyz) 发布！ 
