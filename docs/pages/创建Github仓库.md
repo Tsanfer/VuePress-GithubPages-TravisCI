@@ -66,8 +66,8 @@ cd ~
 git clone git@github.com:{Username}/{Repo}.git
 
 # 比如
-cd ~
-git clone git@github.com:Tsanfer/VuePress-GithubPages-TravisCI.git
+# cd ~
+# git clone git@github.com:Tsanfer/VuePress-GithubPages-TravisCI.git
 ```
 
 ```shell

@@ -168,3 +168,17 @@ deploy:
 - VALUE : \*\*\*\*刚刚的 Token\*\*\*\*
 
 ![](https://cdn-image.tsanfer.xyz/img/20200316181315.png)
+
+
+
+## 推送到Github
+
+```shell
+git add .
+git commit -m '初步完成'
+git push git@github.com:{Username}/{Repo}.git master
+
+# 比如
+# git push git@github.com:Tsanfer/VuePress-GithubPages-TravisCI.git master
+```
+
