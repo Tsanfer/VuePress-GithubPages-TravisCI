@@ -1,16 +1,13 @@
-# 创建Github仓库
+## 创建Github仓库
 
 在Github官网上创建一个新的仓库（我仓库的名字叫`VuePress-GithubPages-TravisCI`）
 
-## SSH密钥链接Github
+### SSH密钥链接Github
 
-### 生成SSH密钥
-
-```shell
-ssh-keygen
-```
+#### 生成SSH密钥
 
 ```shell
+$ ssh-keygen
 Generating public/private rsa key pair.
 # 输入准备存放密钥的位置，公钥和私钥放在同一个文件夹
 Enter file in which to save the key (/home/tsanfer/.ssh/id_rsa): /home/tsanfer/.ssh/test_key
@@ -24,7 +21,7 @@ Your identification has been saved in /home/tsanfer/.ssh/test_key.
 Your public key has been saved in /home/tsanfer/.ssh/test_key.pub.
 ```
 
-### Github添加SSH密钥
+#### Github添加SSH密钥
 
 在Github头像旁边的菜单中 Settings --> SSH and GPG keys --> SSH keys 中的右上角点击 New SSH key
 
@@ -35,7 +32,7 @@ Your public key has been saved in /home/tsanfer/.ssh/test_key.pub.
 - Title：随便填
 - Key：公钥文件里的所有内容（`~/.ssh/test_key.pub`）
 
-### 测试SSH密钥
+#### 测试SSH密钥
 
 测试一下密钥
 
@@ -68,7 +65,3 @@ git clone git@github.com:{Username}/{Repo}.git
 # 比如
 git clone git@github.com:Tsanfer/VuePress-GithubPages-TravisCI.git
 ```
-
-
-
-## 

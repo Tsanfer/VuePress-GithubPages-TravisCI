@@ -1,0 +1,45 @@
+module.exports = {
+    base: '/VuePress-GithubPages-TravisCI/',    //目录根地址，应与Github仓库名字相同
+    title: '创建 VuePress + GithubPages + TravisCI 在线文档',    // 显示在左上角的网页名称以及首页在浏览器标签显示的title名称
+    description: '前端记录',    // meta 中的描述文字，用于SEO
+    //默认主题配置
+    themeConfig: {
+        //导航栏
+        nav: [
+            //链接页面链接的根地址为/docs
+            { text: '思路', link: '/pages/思路.md' },
+            { text: '创建Github仓库', link: '/pages/创建Github仓库.md' },
+            { text: '配置VuePress', link: '/pages/配置VuePress.md' },
+            { text: '博客', link: 'https://tsanfer.xyz' },
+        ],
+        sidebarDepth: 2,    //侧边栏深度
+        //侧边栏
+        sidebar: [
+            ['/pages/思路.md', '思路'],
+            ['/pages/创建Github仓库.md', '创建Github仓库'],
+            ['/pages/配置VuePress.md', '配置VuePress'],
+        ],
+        smoothScroll: true, //页面滚动效果
+        lastUpdated: '最后更新', // string | boolean
+
+        // 假定是 GitHub. 同时也可以是一个完整的 GitLab URL
+        repo: 'Tsanfer/VuePress-GithubPages-TravisCI',
+        // 自定义仓库链接文字。默认从 `themeConfig.repo` 中自动推断为
+        // "GitHub"/"GitLab"/"Bitbucket" 其中之一，或是 "Source"。
+        repoLabel: 'Github',
+
+        // 以下为可选的编辑链接选项
+        // 假如文档不是放在仓库的根目录下：
+        docsDir: 'docs/pages',
+        // 假如文档放在一个特定的分支下：
+        docsBranch: 'master',
+        // 默认是 false, 设置为 true 来启用
+        editLinks: true,
+        // 默认为 "Edit this page"
+        editLinkText: '在 Github 上编辑此页'
+    },
+    //markdown扩展
+    markdown: {
+        lineNumbers: true,
+    }
+}
