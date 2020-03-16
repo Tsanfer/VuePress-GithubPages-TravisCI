@@ -140,7 +140,8 @@ vuepress build .
 │   ├── README.md     //vuepress首页展示用的markdown文件
 ├── deploy.sh     //用于编写TravisCI上传、发布的脚本文件
 ├── LISENSE     //许可证文件
-└── package.json     //Node.js项目描述文件
+├── package.json     //Node.js项目描述文件
+└── .travis.yml	//Travis CI 自动部署文件
 ```
 
 
@@ -336,7 +337,10 @@ module.exports = {
 ```
 
 ::: tip 提示
-到这里其实已经完成配置了，可以执行 `yarn docs:dev` 来浏览配置的页面
+到这里其实已经完成配置了，可以执行 `yarn docs:dev` 来浏览配置的页面，
+
+只是由于没有对应的 md 文件，打开的链接都会404
+
 :::
 
 ### config.js所有内容
@@ -365,7 +369,6 @@ module.exports = {
             { text: '思路', link: '/pages/思路.md' },
             { text: '创建Github仓库', link: '/pages/创建Github仓库.md' },
             { text: '配置VuePress', link: '/pages/配置VuePress.md' },
-            { text: '创建分支和Github pages', link: '/pages/创建分支和Github pages.md' },
             { text: 'TravisCI生成和发布', link: '/pages/TravisCI生成和发布.md' },
             { text: '博客', link: 'https://tsanfer.xyz' },
         ],
@@ -375,7 +378,6 @@ module.exports = {
             ['/pages/思路.md', '思路'],
             ['/pages/创建Github仓库.md', '创建Github仓库'],
             ['/pages/配置VuePress.md', '配置VuePress'],
-            ['/pages/创建分支和Github pages.md', '创建分支和Github pages'],
             ['/pages/TravisCI生成和发布.md', 'TravisCI生成和发布'],
         ],
 

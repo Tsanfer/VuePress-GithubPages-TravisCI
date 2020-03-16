@@ -25,7 +25,7 @@ Your public key has been saved in /home/tsanfer/.ssh/test_key.pub.
 
 在Github头像旁边的菜单中 Settings --> SSH and GPG keys --> SSH keys 中的右上角点击 New SSH key
 
-![](https://cdn-image.tsanfer.xyz/img/20200315223817.png)
+
 
 下面要填入信息：
 

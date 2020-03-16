@@ -21,7 +21,6 @@ module.exports = {
             { text: '思路', link: '/pages/思路.md' },
             { text: '创建Github仓库', link: '/pages/创建Github仓库.md' },
             { text: '配置VuePress', link: '/pages/配置VuePress.md' },
-            { text: '创建分支和Github pages', link: '/pages/创建分支和Github pages.md' },
             { text: 'TravisCI生成和发布', link: '/pages/TravisCI生成和发布.md' },
             { text: '博客', link: 'https://tsanfer.xyz' },
         ],
@@ -31,7 +30,6 @@ module.exports = {
             ['/pages/思路.md', '思路'],
             ['/pages/创建Github仓库.md', '创建Github仓库'],
             ['/pages/配置VuePress.md', '配置VuePress'],
-            ['/pages/创建分支和Github pages.md', '创建分支和Github pages'],
             ['/pages/TravisCI生成和发布.md', 'TravisCI生成和发布'],
         ],
 
