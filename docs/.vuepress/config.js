@@ -2,6 +2,11 @@ module.exports = {
     base: '/VuePress-GithubPages-TravisCI/',    //目录根地址，应与Github仓库名字相同
     title: '创建 VuePress + GithubPages + TravisCI 在线文档',    // 显示在左上角的网页名称以及首页在浏览器标签显示的title名称
     description: '前端记录',    // meta 中的描述文字，用于SEO
+    //markdown扩展
+    markdown: {
+        lineNumbers: true,  //是否在每个代码块的左侧显示行号
+    },
+
     //默认主题配置
     themeConfig: {
         //导航栏
@@ -38,8 +43,11 @@ module.exports = {
         // 默认为 "Edit this page"
         editLinkText: '在 Github 上编辑此页'
     },
-    //markdown扩展
-    markdown: {
-        lineNumbers: true,
-    }
+
+    //插件
+    plugins: [
+        '@vuepress/medium-zoom',    //zooming images like Medium（页面弹框居中显示）
+        '@vuepress/nprogress',  //网页加载进度条
+        '@vuepress/plugin-back-to-top', //返回页面顶部按钮
+    ]
 }
