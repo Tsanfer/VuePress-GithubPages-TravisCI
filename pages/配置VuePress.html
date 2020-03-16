@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>安装VuePress | VuePress + GithubPages + TravisCI</title>
+    <meta name="description" content="创建 VuePress + GithubPages + TravisCI 在线文档">
+    <meta name="generator" content="VuePress 1.3.1">
+    <link rel="icon" href="/VuePress-GithubPages-TravisCI/gamepad_game_128px.ico">
+    
+    <link rel="preload" href="/VuePress-GithubPages-TravisCI/assets/css/0.styles.5fd4e67e.css" as="style"><link rel="preload" href="/VuePress-GithubPages-TravisCI/assets/js/app.9c5c2382.js" as="script"><link rel="preload" href="/VuePress-GithubPages-TravisCI/assets/js/2.88a2148f.js" as="script"><link rel="preload" href="/VuePress-GithubPages-TravisCI/assets/js/9.0c1df4f0.js" as="script"><link rel="prefetch" href="/VuePress-GithubPages-TravisCI/assets/js/10.25d31a02.js"><link rel="prefetch" href="/VuePress-GithubPages-TravisCI/assets/js/3.cf17863a.js"><link rel="prefetch" href="/VuePress-GithubPages-TravisCI/assets/js/4.95d74f93.js"><link rel="prefetch" href="/VuePress-GithubPages-TravisCI/assets/js/5.fa890c8c.js"><link rel="prefetch" href="/VuePress-GithubPages-TravisCI/assets/js/6.4c0f2353.js"><link rel="prefetch" href="/VuePress-GithubPages-TravisCI/assets/js/7.6af1eee6.js"><link rel="prefetch" href="/VuePress-GithubPages-TravisCI/assets/js/8.ea20dcef.js">
+    <link rel="stylesheet" href="/VuePress-GithubPages-TravisCI/assets/css/0.styles.5fd4e67e.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/VuePress-GithubPages-TravisCI/" class="home-link router-link-active"><!----> <span class="site-name">VuePress + GithubPages + TravisCI</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/VuePress-GithubPages-TravisCI/pages/思路.html" class="nav-link">
+  思路
+</a></div><div class="nav-item"><a href="/VuePress-GithubPages-TravisCI/pages/创建Github仓库.html" class="nav-link">
+  创建Github仓库
+</a></div><div class="nav-item"><a href="/VuePress-GithubPages-TravisCI/pages/配置VuePress.html" class="nav-link">
+  配置VuePress
+</a></div><div class="nav-item"><a href="/VuePress-GithubPages-TravisCI/pages/TravisCI生成和发布.html" class="nav-link">
+  TravisCI生成和发布
+</a></div><div class="nav-item"><a href="https://tsanfer.xyz" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  博客
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div> <a href="https://github.com/Tsanfer/VuePress-GithubPages-TravisCI" target="_blank" rel="noopener noreferrer" class="repo-link">
+    Github
+    <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/VuePress-GithubPages-TravisCI/pages/思路.html" class="nav-link">
+  思路
+</a></div><div class="nav-item"><a href="/VuePress-GithubPages-TravisCI/pages/创建Github仓库.html" class="nav-link">
+  创建Github仓库
+</a></div><div class="nav-item"><a href="/VuePress-GithubPages-TravisCI/pages/配置VuePress.html" class="nav-link">
+  配置VuePress
+</a></div><div class="nav-item"><a href="/VuePress-GithubPages-TravisCI/pages/TravisCI生成和发布.html" class="nav-link">
+  TravisCI生成和发布
+</a></div><div class="nav-item"><a href="https://tsanfer.xyz" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  博客
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div> <a href="https://github.com/Tsanfer/VuePress-GithubPages-TravisCI" target="_blank" rel="noopener noreferrer" class="repo-link">
+    Github
+    <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></nav>  <ul class="sidebar-links"><li><a href="/VuePress-GithubPages-TravisCI/pages/思路.html" class="sidebar-link">思路</a></li><li><a href="/VuePress-GithubPages-TravisCI/pages/创建Github仓库.html" class="sidebar-link">创建Github仓库</a></li><li><a href="/VuePress-GithubPages-TravisCI/pages/配置VuePress.html" class="active sidebar-link">配置VuePress</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/VuePress-GithubPages-TravisCI/pages/配置VuePress.html#安装vuepress" class="sidebar-link">安装VuePress</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/VuePress-GithubPages-TravisCI/pages/配置VuePress.html#安装yarn" class="sidebar-link">安装yarn</a></li><li class="sidebar-sub-header"><a href="/VuePress-GithubPages-TravisCI/pages/配置VuePress.html#安装vuepress-2" class="sidebar-link">安装VuePress</a></li><li class="sidebar-sub-header"><a href="/VuePress-GithubPages-TravisCI/pages/配置VuePress.html#vuepress目录结构" class="sidebar-link">VuePress目录结构</a></li></ul></li><li class="sidebar-sub-header"><a href="/VuePress-GithubPages-TravisCI/pages/配置VuePress.html#配置依赖和脚本" class="sidebar-link">配置依赖和脚本</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/VuePress-GithubPages-TravisCI/pages/配置VuePress.html#配置package-json" class="sidebar-link">配置package.json</a></li></ul></li><li class="sidebar-sub-header"><a href="/VuePress-GithubPages-TravisCI/pages/配置VuePress.html#页面的设置" class="sidebar-link">页面的设置</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/VuePress-GithubPages-TravisCI/pages/配置VuePress.html#首页" class="sidebar-link">首页</a></li><li class="sidebar-sub-header"><a href="/VuePress-GithubPages-TravisCI/pages/配置VuePress.html#文档属性" class="sidebar-link">文档属性</a></li><li class="sidebar-sub-header"><a href="/VuePress-GithubPages-TravisCI/pages/配置VuePress.html#markdown扩展" class="sidebar-link">markdown扩展</a></li><li class="sidebar-sub-header"><a href="/VuePress-GithubPages-TravisCI/pages/配置VuePress.html#默认主题设置" class="sidebar-link">默认主题设置</a></li><li class="sidebar-sub-header"><a href="/VuePress-GithubPages-TravisCI/pages/配置VuePress.html#插件" class="sidebar-link">插件</a></li><li class="sidebar-sub-header"><a href="/VuePress-GithubPages-TravisCI/pages/配置VuePress.html#config-js所有内容" class="sidebar-link">config.js所有内容</a></li></ul></li></ul></li><li><a href="/VuePress-GithubPages-TravisCI/pages/TravisCI生成和发布.html" class="sidebar-link">TravisCI生成和发布</a></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h2 id="安装vuepress"><a href="#安装vuepress" class="header-anchor">#</a> 安装VuePress</h2> <div class="custom-block warning"><p class="custom-block-title">注意</p> <p>请确保你的 Node.js 版本 &gt;= 8。</p></div> <h3 id="安装yarn"><a href="#安装yarn" class="header-anchor">#</a> 安装yarn</h3> <blockquote><p>也可以安装npm</p></blockquote> <h4 id="debian-ubuntu"><a href="#debian-ubuntu" class="header-anchor">#</a> Debian / Ubuntu</h4> <p>在 Debian 或 Ubuntu 上，需要用yarn的 Debian 包仓库来安装 Yarn。 首先需要配置仓库：</p> <div class="language-shell line-numbers-mode"><pre class="language-shell"><code><span class="token function">curl</span> -sS https://dl.yarnpkg.com/debian/pubkey.gpg <span class="token operator">|</span> <span class="token function">sudo</span> apt-key <span class="token function">add</span> -
+<span class="token builtin class-name">echo</span> <span class="token string">&quot;deb https://dl.yarnpkg.com/debian/ stable main&quot;</span> <span class="token operator">|</span> <span class="token function">sudo</span> <span class="token function">tee</span> /etc/apt/sources.list.d/yarn.list
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br></div></div><p>更新库和下载yarn</p> <div class="language-shell line-numbers-mode"><pre class="language-shell"><code><span class="token function">sudo</span> <span class="token function">apt-get</span> update <span class="token operator">&amp;&amp;</span> <span class="token function">sudo</span> <span class="token function">apt-get</span> <span class="token function">install</span> <span class="token function">yarn</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><p>运行命令来测试 Yarn 是否安装：</p> <div class="language-shell line-numbers-mode"><pre class="language-shell"><code>$ <span class="token function">yarn</span> --version
+<span class="token number">1.22</span>.4
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br></div></div><h4 id="windows"><a href="#windows" class="header-anchor">#</a> Windows</h4> <p>直接下安装包，然后在CMD或者Powershell里运行</p> <h4 id="更换国内的源"><a href="#更换国内的源" class="header-anchor">#</a> 更换国内的源</h4> <p>先看一下当前的源</p> <div class="language-shell line-numbers-mode"><pre class="language-shell"><code>$ <span class="token function">yarn</span> config get registry
+https://registry.yarnpkg.com
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br></div></div><p>更换阿里淘宝的源</p> <div class="language-shell line-numbers-mode"><pre class="language-shell"><code><span class="token function">yarn</span> config <span class="token builtin class-name">set</span> registry https://registry.npm.taobao.org
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><h3 id="安装vuepress-2"><a href="#安装vuepress-2" class="header-anchor">#</a> 安装VuePress</h3> <div class="language-shell line-numbers-mode"><pre class="language-shell"><code><span class="token comment"># 先进入安装目录，就是刚刚克隆的仓库</span>
+<span class="token builtin class-name">cd</span> ~/VuePress-GithubPages-TravisCI
+<span class="token comment"># 安装</span>
+<span class="token function">sudo</span> <span class="token function">yarn</span> global <span class="token function">add</span> vuepress <span class="token comment"># 或者：npm install -g vuepress</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br></div></div><p>然后试一下看是否安装成功</p> <div class="language-shell line-numbers-mode"><pre class="language-shell"><code><span class="token comment"># 新建一个 markdown 文件</span>
+<span class="token builtin class-name">echo</span> <span class="token string">'# Hello VuePress!'</span> <span class="token operator">&gt;</span> README.md
+
+<span class="token comment"># 开始写作</span>
+vuepress dev <span class="token builtin class-name">.</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br></div></div><div class="language-shell line-numbers-mode"><pre class="language-shell"><code>ℹ ｢wds｣: Project is running at http://0.0.0.0:8081/
+ℹ ｢wds｣: webpack output is served from /
+ℹ ｢wds｣: Content not from webpack is served from /mnt/k/Git_Bash/VuePress-GithubPages-TravisCI/.vuepress/public
+ℹ ｢wds｣: 404s will fallback to /index.html
+success <span class="token punctuation">[</span>00:00:17<span class="token punctuation">]</span> Build 471ee0 finished <span class="token keyword">in</span> <span class="token number">8465</span> ms<span class="token operator">!</span>
+<span class="token operator">&gt;</span> VuePress dev server listening at http://localhost:8081/
+
+<span class="token comment"># 生成的地址 http://localhost:8081/</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br></div></div><p>用浏览器打开vuepress生成的网页的地址</p> <p>或者构建静态文件</p> <div class="language-bash line-numbers-mode"><pre class="language-bash"><code><span class="token comment"># 构建静态文件</span>
+vuepress build <span class="token builtin class-name">.</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br></div></div><p>但会因为路径不对，网页的样式显示不出来</p> <h3 id="vuepress目录结构"><a href="#vuepress目录结构" class="header-anchor">#</a> VuePress目录结构</h3> <p>官方给的结构</p> <blockquote><p>VuePress 遵循 <strong>“约定优于配置”</strong> 的原则，推荐的目录结构如下：</p> <div class="language-shell line-numbers-mode"><pre class="language-shell"><code><span class="token builtin class-name">.</span>
+├── docs
+│   ├── .vuepress <span class="token punctuation">(</span>可选的<span class="token punctuation">)</span>
+│   │   ├── components <span class="token punctuation">(</span>可选的<span class="token punctuation">)</span>
+│   │   ├── theme <span class="token punctuation">(</span>可选的<span class="token punctuation">)</span>
+│   │   │   └── Layout.vue
+│   │   ├── public <span class="token punctuation">(</span>可选的<span class="token punctuation">)</span>
+│   │   ├── styles <span class="token punctuation">(</span>可选的<span class="token punctuation">)</span>
+│   │   │   ├── index.styl
+│   │   │   └── palette.styl
+│   │   ├── templates <span class="token punctuation">(</span>可选的, 谨慎配置<span class="token punctuation">)</span>
+│   │   │   ├── dev.html
+│   │   │   └── ssr.html
+│   │   ├── config.js <span class="token punctuation">(</span>可选的<span class="token punctuation">)</span>
+│   │   └── enhanceApp.js <span class="token punctuation">(</span>可选的<span class="token punctuation">)</span>
+│   │ 
+│   ├── README.md
+│   ├── guide
+│   │   └── README.md
+│   └── config.md
+│ 
+└── package.json
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br></div></div></blockquote> <p>这里用到的结构</p> <div class="language-shell line-numbers-mode"><pre class="language-shell"><code><span class="token builtin class-name">.</span>
+├── README.md     // Github项目展示文件
+├── docs     //vuepress项目根目录
+│   ├── .vuepress      //存放核心内容的文件夹
+│   │   ├── public     //存放静态文件，如图片等
+│   │   └── config.js     //设定顶部导航栏、侧边导航栏等项目配置的核心文件
+│   ├── pages      //存放markdown页面的文件
+│   ├── README.md     //vuepress首页展示用的markdown文件
+├── deploy.sh     //用于编写TravisCI上传、发布的脚本文件
+├── LISENSE     //许可证文件
+├── package.json     //Node.js项目描述文件
+└── .travis.yml	//Travis CI 自动部署文件
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br></div></div><h2 id="配置依赖和脚本"><a href="#配置依赖和脚本" class="header-anchor">#</a> 配置依赖和脚本</h2> <h3 id="配置package-json"><a href="#配置package-json" class="header-anchor">#</a> 配置package.json</h3> <p>在 <code>package.json</code> 里加一些脚本和后面要用的依赖:</p> <div class="language-json line-numbers-mode"><pre class="language-json"><code><span class="token punctuation">{</span>
+  <span class="token property">&quot;dependencies&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token property">&quot;@vuepress/plugin-active-header-links&quot;</span><span class="token operator">:</span> <span class="token string">&quot;^1.3.1&quot;</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;@vuepress/plugin-medium-zoom&quot;</span><span class="token operator">:</span> <span class="token string">&quot;^1.3.1&quot;</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;@vuepress/plugin-nprogress&quot;</span><span class="token operator">:</span> <span class="token string">&quot;^1.3.1&quot;</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;@vuepress/plugin-back-to-top&quot;</span><span class="token operator">:</span> <span class="token string">&quot;^1.3.1&quot;</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;vuepress&quot;</span><span class="token operator">:</span> <span class="token string">&quot;^1.3.1&quot;</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token property">&quot;scripts&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token property">&quot;docs:build&quot;</span><span class="token operator">:</span> <span class="token string">&quot;vuepress build docs&quot;</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;docs:dev&quot;</span><span class="token operator">:</span> <span class="token string">&quot;vuepress dev docs&quot;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br></div></div><p>加载依赖</p> <div class="language-shell line-numbers-mode"><pre class="language-shell"><code><span class="token function">yarn</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><p>命令</p> <div class="language-bash line-numbers-mode"><pre class="language-bash"><code><span class="token function">yarn</span> docs:dev <span class="token comment"># 或者：npm run docs:dev</span>
+<span class="token function">yarn</span> docs:build <span class="token comment"># 或者：npm run docs:build</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br></div></div><h2 id="页面的设置"><a href="#页面的设置" class="header-anchor">#</a> 页面的设置</h2> <h3 id="首页"><a href="#首页" class="header-anchor">#</a> 首页</h3> <p><code>/docs/README.md</code></p> <div class="language-yaml line-numbers-mode"><pre class="language-yaml"><code><span class="token punctuation">---</span>
+<span class="token key atrule">home</span><span class="token punctuation">:</span> <span class="token boolean important">true</span>
+<span class="token key atrule">heroImage</span><span class="token punctuation">:</span> https<span class="token punctuation">:</span>//cdn<span class="token punctuation">-</span>image.tsanfer.xyz/img/vuepress_githubpages_travisCI.svg
+<span class="token key atrule">actionText</span><span class="token punctuation">:</span> 快速上手 →
+<span class="token key atrule">actionLink</span><span class="token punctuation">:</span> /pages/思路.md
+<span class="token key atrule">features</span><span class="token punctuation">:</span>
+<span class="token punctuation">-</span> <span class="token key atrule">title</span><span class="token punctuation">:</span> 简洁至上
+  <span class="token key atrule">details</span><span class="token punctuation">:</span> 以 Markdown 为中心的项目结构，以最少的配置帮助你专注于写作。
+<span class="token punctuation">-</span> <span class="token key atrule">title</span><span class="token punctuation">:</span> Vue驱动
+  <span class="token key atrule">details</span><span class="token punctuation">:</span> 享受 Vue + webpack 的开发体验，在 Markdown 中使用 Vue 组件，同时可以使用 Vue 来开发自定义主题。
+<span class="token punctuation">-</span> <span class="token key atrule">title</span><span class="token punctuation">:</span> 高性能
+  <span class="token key atrule">details</span><span class="token punctuation">:</span> VuePress 为每个页面预渲染生成静态的 HTML，同时在页面被加载的时候，将作为 SPA 运行。
+<span class="token key atrule">footer</span><span class="token punctuation">:</span> MIT Licensed <span class="token punctuation">|</span> Copyright © 2020 Tsanfer
+<span class="token punctuation">---</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br></div></div><h3 id="文档属性"><a href="#文档属性" class="header-anchor">#</a> 文档属性</h3> <p><code>/docs/.vuepress/config.js</code></p> <div class="language-js line-numbers-mode"><pre class="language-js"><code>module<span class="token punctuation">.</span>exports <span class="token operator">=</span> <span class="token punctuation">{</span>
+    base<span class="token operator">:</span> <span class="token string">'/VuePress-GithubPages-TravisCI/'</span><span class="token punctuation">,</span>    <span class="token comment">//目录根地址，应与Github仓库名字相同</span>
+    title<span class="token operator">:</span> <span class="token string">'VuePress + GithubPages + TravisCI'</span><span class="token punctuation">,</span>    <span class="token comment">// 显示在左上角的网页名称以及首页在浏览器标签显示的title名称</span>
+    description<span class="token operator">:</span> <span class="token string">'创建 VuePress + GithubPages + TravisCI 在线文档'</span><span class="token punctuation">,</span>    <span class="token comment">// meta 中的描述文字，用于SEO</span>
+    head<span class="token operator">:</span> <span class="token punctuation">[</span>
+        <span class="token punctuation">[</span><span class="token string">'link'</span><span class="token punctuation">,</span> 
+            <span class="token punctuation">{</span> rel<span class="token operator">:</span> <span class="token string">'icon'</span><span class="token punctuation">,</span> href<span class="token operator">:</span> <span class="token string">'/gamepad_game_128px.ico'</span> <span class="token punctuation">}</span>   <span class="token comment">//浏览器的标签栏的网页图标,基地址/docs/.vuepress/public</span>
+        <span class="token punctuation">]</span><span class="token punctuation">,</span>  
+    <span class="token punctuation">]</span><span class="token punctuation">,</span>
+<span class="token punctuation">}</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br></div></div><h3 id="markdown扩展"><a href="#markdown扩展" class="header-anchor">#</a> markdown扩展</h3> <p><code>/docs/.vuepress/config.js</code></p> <div class="language-js line-numbers-mode"><pre class="language-js"><code>module<span class="token punctuation">.</span>exports <span class="token operator">=</span> <span class="token punctuation">{</span>
+    markdown<span class="token operator">:</span> <span class="token punctuation">{</span>
+        lineNumbers<span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>  <span class="token comment">//是否在每个代码块的左侧显示行号</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+<span class="token punctuation">}</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br></div></div><h3 id="默认主题设置"><a href="#默认主题设置" class="header-anchor">#</a> 默认主题设置</h3> <h4 id="导航栏"><a href="#导航栏" class="header-anchor">#</a> 导航栏</h4> <p><code>/docs/.vuepress/config.js</code></p> <div class="language-js line-numbers-mode"><pre class="language-js"><code>module<span class="token punctuation">.</span>exports <span class="token operator">=</span> <span class="token punctuation">{</span>
+	themeConfig<span class="token operator">:</span> <span class="token punctuation">{</span>
+		nav<span class="token operator">:</span> <span class="token punctuation">[</span>
+            <span class="token comment">//链接页面链接的根地址为/docs</span>
+            <span class="token punctuation">{</span> text<span class="token operator">:</span> <span class="token string">'思路'</span><span class="token punctuation">,</span> link<span class="token operator">:</span> <span class="token string">'/pages/思路.md'</span> <span class="token punctuation">}</span><span class="token punctuation">,</span>
+            <span class="token punctuation">{</span> text<span class="token operator">:</span> <span class="token string">'创建Github仓库'</span><span class="token punctuation">,</span> link<span class="token operator">:</span> <span class="token string">'/pages/创建Github仓库.md'</span> <span class="token punctuation">}</span><span class="token punctuation">,</span>
+            <span class="token punctuation">{</span> text<span class="token operator">:</span> <span class="token string">'配置VuePress'</span><span class="token punctuation">,</span> link<span class="token operator">:</span> <span class="token string">'/pages/配置VuePress.md'</span> <span class="token punctuation">}</span><span class="token punctuation">,</span>
+            <span class="token punctuation">{</span> text<span class="token operator">:</span> <span class="token string">'创建分支和Github pages'</span><span class="token punctuation">,</span> link<span class="token operator">:</span> <span class="token string">'/pages/创建分支和Github pages.md'</span> <span class="token punctuation">}</span><span class="token punctuation">,</span>
+            <span class="token punctuation">{</span> text<span class="token operator">:</span> <span class="token string">'TravisCI生成和发布'</span><span class="token punctuation">,</span> link<span class="token operator">:</span> <span class="token string">'/pages/TravisCI生成和发布.md'</span> <span class="token punctuation">}</span><span class="token punctuation">,</span>
+            <span class="token punctuation">{</span> text<span class="token operator">:</span> <span class="token string">'博客'</span><span class="token punctuation">,</span> link<span class="token operator">:</span> <span class="token string">'https://tsanfer.xyz'</span> <span class="token punctuation">}</span><span class="token punctuation">,</span>
+        <span class="token punctuation">]</span><span class="token punctuation">,</span>
+	<span class="token punctuation">}</span><span class="token punctuation">,</span>
+<span class="token punctuation">}</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br></div></div><h4 id="侧边栏"><a href="#侧边栏" class="header-anchor">#</a> 侧边栏</h4> <p><code>/docs/.vuepress/config.js</code></p> <div class="language-js line-numbers-mode"><pre class="language-js"><code>module<span class="token punctuation">.</span>exports <span class="token operator">=</span> <span class="token punctuation">{</span>
+	themeConfig<span class="token operator">:</span> <span class="token punctuation">{</span>
+        sidebarDepth<span class="token operator">:</span> <span class="token number">2</span><span class="token punctuation">,</span>    <span class="token comment">//侧边栏深度</span>
+        sidebar<span class="token operator">:</span> <span class="token punctuation">[</span>
+            <span class="token punctuation">[</span><span class="token string">'/pages/思路.md'</span><span class="token punctuation">,</span> <span class="token string">'思路'</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+            <span class="token punctuation">[</span><span class="token string">'/pages/创建Github仓库.md'</span><span class="token punctuation">,</span> <span class="token string">'创建Github仓库'</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+            <span class="token punctuation">[</span><span class="token string">'/pages/配置VuePress.md'</span><span class="token punctuation">,</span> <span class="token string">'配置VuePress'</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+            <span class="token punctuation">[</span><span class="token string">'/pages/创建分支和Github pages.md'</span><span class="token punctuation">,</span> <span class="token string">'创建分支和Github pages'</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+            <span class="token punctuation">[</span><span class="token string">'/pages/TravisCI生成和发布.md'</span><span class="token punctuation">,</span> <span class="token string">'TravisCI生成和发布'</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+        <span class="token punctuation">]</span><span class="token punctuation">,</span>
+	<span class="token punctuation">}</span><span class="token punctuation">,</span>
+<span class="token punctuation">}</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br></div></div><h4 id="git仓库"><a href="#git仓库" class="header-anchor">#</a> Git仓库</h4> <p><code>/docs/.vuepress/config.js</code></p> <div class="language-js line-numbers-mode"><pre class="language-js"><code>module<span class="token punctuation">.</span>exports <span class="token operator">=</span> <span class="token punctuation">{</span>
+	 themeConfig<span class="token operator">:</span> <span class="token punctuation">{</span>
+		<span class="token comment">// 假定是 GitHub. 同时也可以是一个完整的 GitLab URL</span>
+        repo<span class="token operator">:</span> <span class="token string">'Tsanfer/VuePress-GithubPages-TravisCI'</span><span class="token punctuation">,</span>
+        <span class="token comment">// 自定义仓库链接文字。默认从 `themeConfig.repo` 中自动推断为</span>
+        <span class="token comment">// &quot;GitHub&quot;/&quot;GitLab&quot;/&quot;Bitbucket&quot; 其中之一，或是 &quot;Source&quot;。</span>
+        repoLabel<span class="token operator">:</span> <span class="token string">'Github'</span><span class="token punctuation">,</span>
+        <span class="token comment">// 以下为可选的编辑链接选项</span>
+        <span class="token comment">// 假如文档不是放在仓库的根目录下：</span>
+        docsDir<span class="token operator">:</span> <span class="token string">'docs/pages'</span><span class="token punctuation">,</span>
+        <span class="token comment">// 假如文档放在一个特定的分支下：</span>
+        docsBranch<span class="token operator">:</span> <span class="token string">'master'</span><span class="token punctuation">,</span>
+        <span class="token comment">// 默认是 false, 设置为 true 来启用</span>
+        editLinks<span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+        <span class="token comment">// 默认为 &quot;Edit this page&quot;</span>
+        editLinkText<span class="token operator">:</span> <span class="token string">'在 Github 上编辑此页'</span><span class="token punctuation">,</span> 
+	<span class="token punctuation">}</span><span class="token punctuation">,</span>
+<span class="token punctuation">}</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br></div></div><h4 id="其他"><a href="#其他" class="header-anchor">#</a> 其他</h4> <p><code>/docs/.vuepress/config.js</code></p> <div class="language-js line-numbers-mode"><pre class="language-js"><code>module<span class="token punctuation">.</span>exports <span class="token operator">=</span> <span class="token punctuation">{</span>
+	 themeConfig<span class="token operator">:</span> <span class="token punctuation">{</span>
+		smoothScroll<span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span> <span class="token comment">//页面滚动效果</span>
+        lastUpdated<span class="token operator">:</span> <span class="token string">'最后更新'</span><span class="token punctuation">,</span> <span class="token comment">// string | boolean</span>
+     <span class="token punctuation">}</span><span class="token punctuation">,</span>
+<span class="token punctuation">}</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br></div></div><h3 id="插件"><a href="#插件" class="header-anchor">#</a> 插件</h3> <p><code>/docs/.vuepress/config.js</code></p> <div class="language-js line-numbers-mode"><pre class="language-js"><code>module<span class="token punctuation">.</span>exports <span class="token operator">=</span> <span class="token punctuation">{</span>
+    plugins<span class="token operator">:</span> <span class="token punctuation">[</span>
+        <span class="token string">'@vuepress/medium-zoom'</span><span class="token punctuation">,</span>    <span class="token comment">//zooming images like Medium（页面弹框居中显示）</span>
+        <span class="token string">'@vuepress/nprogress'</span><span class="token punctuation">,</span>  <span class="token comment">//网页加载进度条</span>
+        <span class="token string">'@vuepress/plugin-back-to-top'</span><span class="token punctuation">,</span> <span class="token comment">//返回页面顶部按钮</span>
+    <span class="token punctuation">]</span>
+<span class="token punctuation">}</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br></div></div><div class="custom-block tip"><p class="custom-block-title">提示</p> <p>到这里其实已经完成配置了，可以执行 <code>yarn docs:dev</code> 来浏览配置的页面，</p> <p>只是由于没有对应的 md 文件，打开的链接都会404</p></div> <h3 id="config-js所有内容"><a href="#config-js所有内容" class="header-anchor">#</a> config.js所有内容</h3> <div class="language-js line-numbers-mode"><pre class="language-js"><code>module<span class="token punctuation">.</span>exports <span class="token operator">=</span> <span class="token punctuation">{</span>
+    base<span class="token operator">:</span> <span class="token string">'/VuePress-GithubPages-TravisCI/'</span><span class="token punctuation">,</span>    <span class="token comment">//目录根地址，应与Github仓库名字相同</span>
+    title<span class="token operator">:</span> <span class="token string">'VuePress + GithubPages + TravisCI'</span><span class="token punctuation">,</span>    <span class="token comment">// 显示在左上角的网页名称以及首页在浏览器标签显示的title名称</span>
+    description<span class="token operator">:</span> <span class="token string">'创建 VuePress + GithubPages + TravisCI 在线文档'</span><span class="token punctuation">,</span>    <span class="token comment">// meta 中的描述文字，用于SEO</span>
+    head<span class="token operator">:</span> <span class="token punctuation">[</span>
+        <span class="token punctuation">[</span><span class="token string">'link'</span><span class="token punctuation">,</span> 
+            <span class="token punctuation">{</span> rel<span class="token operator">:</span> <span class="token string">'icon'</span><span class="token punctuation">,</span> href<span class="token operator">:</span> <span class="token string">'/gamepad_game_128px.ico'</span> <span class="token punctuation">}</span>   <span class="token comment">//浏览器的标签栏的网页图标,基地址/docs/.vuepress/public</span>
+        <span class="token punctuation">]</span><span class="token punctuation">,</span>  
+    <span class="token punctuation">]</span><span class="token punctuation">,</span>
+
+    <span class="token comment">//markdown扩展</span>
+    markdown<span class="token operator">:</span> <span class="token punctuation">{</span>
+        lineNumbers<span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>  <span class="token comment">//是否在每个代码块的左侧显示行号</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+
+    <span class="token comment">//默认主题配置</span>
+    themeConfig<span class="token operator">:</span> <span class="token punctuation">{</span>
+        <span class="token comment">//导航栏</span>
+        nav<span class="token operator">:</span> <span class="token punctuation">[</span>
+            <span class="token comment">//链接页面链接的根地址为/docs</span>
+            <span class="token punctuation">{</span> text<span class="token operator">:</span> <span class="token string">'思路'</span><span class="token punctuation">,</span> link<span class="token operator">:</span> <span class="token string">'/pages/思路.md'</span> <span class="token punctuation">}</span><span class="token punctuation">,</span>
+            <span class="token punctuation">{</span> text<span class="token operator">:</span> <span class="token string">'创建Github仓库'</span><span class="token punctuation">,</span> link<span class="token operator">:</span> <span class="token string">'/pages/创建Github仓库.md'</span> <span class="token punctuation">}</span><span class="token punctuation">,</span>
+            <span class="token punctuation">{</span> text<span class="token operator">:</span> <span class="token string">'配置VuePress'</span><span class="token punctuation">,</span> link<span class="token operator">:</span> <span class="token string">'/pages/配置VuePress.md'</span> <span class="token punctuation">}</span><span class="token punctuation">,</span>
+            <span class="token punctuation">{</span> text<span class="token operator">:</span> <span class="token string">'TravisCI生成和发布'</span><span class="token punctuation">,</span> link<span class="token operator">:</span> <span class="token string">'/pages/TravisCI生成和发布.md'</span> <span class="token punctuation">}</span><span class="token punctuation">,</span>
+            <span class="token punctuation">{</span> text<span class="token operator">:</span> <span class="token string">'博客'</span><span class="token punctuation">,</span> link<span class="token operator">:</span> <span class="token string">'https://tsanfer.xyz'</span> <span class="token punctuation">}</span><span class="token punctuation">,</span>
+        <span class="token punctuation">]</span><span class="token punctuation">,</span>
+        sidebarDepth<span class="token operator">:</span> <span class="token number">2</span><span class="token punctuation">,</span>    <span class="token comment">//侧边栏深度</span>
+        <span class="token comment">//侧边栏</span>
+        sidebar<span class="token operator">:</span> <span class="token punctuation">[</span>
+            <span class="token punctuation">[</span><span class="token string">'/pages/思路.md'</span><span class="token punctuation">,</span> <span class="token string">'思路'</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+            <span class="token punctuation">[</span><span class="token string">'/pages/创建Github仓库.md'</span><span class="token punctuation">,</span> <span class="token string">'创建Github仓库'</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+            <span class="token punctuation">[</span><span class="token string">'/pages/配置VuePress.md'</span><span class="token punctuation">,</span> <span class="token string">'配置VuePress'</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+            <span class="token punctuation">[</span><span class="token string">'/pages/TravisCI生成和发布.md'</span><span class="token punctuation">,</span> <span class="token string">'TravisCI生成和发布'</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+        <span class="token punctuation">]</span><span class="token punctuation">,</span>
+
+        <span class="token comment">// 假定是 GitHub. 同时也可以是一个完整的 GitLab URL</span>
+        repo<span class="token operator">:</span> <span class="token string">'Tsanfer/VuePress-GithubPages-TravisCI'</span><span class="token punctuation">,</span>
+        <span class="token comment">// 自定义仓库链接文字。默认从 `themeConfig.repo` 中自动推断为</span>
+        <span class="token comment">// &quot;GitHub&quot;/&quot;GitLab&quot;/&quot;Bitbucket&quot; 其中之一，或是 &quot;Source&quot;。</span>
+        repoLabel<span class="token operator">:</span> <span class="token string">'Github'</span><span class="token punctuation">,</span>
+        <span class="token comment">// 以下为可选的编辑链接选项</span>
+        <span class="token comment">// 假如文档不是放在仓库的根目录下：</span>
+        docsDir<span class="token operator">:</span> <span class="token string">'docs/pages'</span><span class="token punctuation">,</span>
+        <span class="token comment">// 假如文档放在一个特定的分支下：</span>
+        docsBranch<span class="token operator">:</span> <span class="token string">'master'</span><span class="token punctuation">,</span>
+        <span class="token comment">// 默认是 false, 设置为 true 来启用</span>
+        editLinks<span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+        <span class="token comment">// 默认为 &quot;Edit this page&quot;</span>
+        editLinkText<span class="token operator">:</span> <span class="token string">'在 Github 上编辑此页'</span><span class="token punctuation">,</span>
+
+        smoothScroll<span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span> <span class="token comment">//页面滚动效果</span>
+        lastUpdated<span class="token operator">:</span> <span class="token string">'最后更新'</span><span class="token punctuation">,</span> <span class="token comment">// string | boolean</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+
+    <span class="token comment">//插件</span>
+    plugins<span class="token operator">:</span> <span class="token punctuation">[</span>
+        <span class="token string">'@vuepress/medium-zoom'</span><span class="token punctuation">,</span>    <span class="token comment">//zooming images like Medium（页面弹框居中显示）</span>
+        <span class="token string">'@vuepress/nprogress'</span><span class="token punctuation">,</span>  <span class="token comment">//网页加载进度条</span>
+        <span class="token string">'@vuepress/plugin-back-to-top'</span><span class="token punctuation">,</span> <span class="token comment">//返回页面顶部按钮</span>
+    <span class="token punctuation">]</span>
+<span class="token punctuation">}</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br><span class="line-number">31</span><br><span class="line-number">32</span><br><span class="line-number">33</span><br><span class="line-number">34</span><br><span class="line-number">35</span><br><span class="line-number">36</span><br><span class="line-number">37</span><br><span class="line-number">38</span><br><span class="line-number">39</span><br><span class="line-number">40</span><br><span class="line-number">41</span><br><span class="line-number">42</span><br><span class="line-number">43</span><br><span class="line-number">44</span><br><span class="line-number">45</span><br><span class="line-number">46</span><br><span class="line-number">47</span><br><span class="line-number">48</span><br><span class="line-number">49</span><br><span class="line-number">50</span><br><span class="line-number">51</span><br><span class="line-number">52</span><br><span class="line-number">53</span><br><span class="line-number">54</span><br><span class="line-number">55</span><br><span class="line-number">56</span><br><span class="line-number">57</span><br><span class="line-number">58</span><br><span class="line-number">59</span><br><span class="line-number">60</span><br><span class="line-number">61</span><br></div></div></div> <footer class="page-edit"><div class="edit-link"><a href="https://github.com/Tsanfer/VuePress-GithubPages-TravisCI/edit/master/docs/pages/pages/配置VuePress.md" target="_blank" rel="noopener noreferrer">在 Github 上编辑此页</a> <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></div> <div class="last-updated"><span class="prefix">最后更新:</span> <span class="time">3/16/2020, 10:19:41 AM</span></div></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/VuePress-GithubPages-TravisCI/pages/创建Github仓库.html" class="prev">
+        创建Github仓库
+      </a></span> <span class="next"><a href="/VuePress-GithubPages-TravisCI/pages/TravisCI生成和发布.html">
+        TravisCI生成和发布
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"><!----></div></div>
+    <script src="/VuePress-GithubPages-TravisCI/assets/js/app.9c5c2382.js" defer></script><script src="/VuePress-GithubPages-TravisCI/assets/js/2.88a2148f.js" defer></script><script src="/VuePress-GithubPages-TravisCI/assets/js/9.0c1df4f0.js" defer></script>
+  </body>
+</html>
