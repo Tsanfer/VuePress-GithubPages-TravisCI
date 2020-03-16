@@ -52,6 +52,8 @@ yarn config set registry https://registry.npm.taobao.org
 ### 安装VuePress
 
 ```shell
+# 先进入安装目录，就是刚刚克隆的仓库
+cd ~/VuePress-GithubPages-TravisCI
 # 安装
 sudo yarn global add vuepress # 或者：npm install -g vuepress
 ```
@@ -143,25 +145,35 @@ vuepress build .
 
 
 
-## 页面的内容设置
+## 配置依赖和脚本
 
 ### 配置package.json
 
-在 `package.json` 里加一些脚本:
+在 `package.json` 里加一些脚本和后面要用的依赖:
 
 ```json
 {
-  "scripts": {
-    "docs:dev": "vuepress dev docs",
-    "docs:build": "vuepress build docs"
-  },
   "dependencies": {
+    "@vuepress/plugin-active-header-links": "^1.3.1",
+    "@vuepress/plugin-medium-zoom": "^1.3.1",
+    "@vuepress/plugin-nprogress": "^1.3.1",
+    "@vuepress/plugin-back-to-top": "^1.3.1",
     "vuepress": "^1.3.1"
+  },
+  "scripts": {
+    "docs:build": "vuepress build docs",
+    "docs:dev": "vuepress dev docs"
   }
 }
 ```
 
-可加载依赖的命令
+加载依赖
+
+```shell
+yarn
+```
+
+命令
 
 ```bash
 yarn docs:dev # 或者：npm run docs:dev
@@ -170,16 +182,16 @@ yarn docs:build # 或者：npm run docs:build
 
 
 
-###  配置主题
+## 页面的设置
 
-####  首页
+###  首页
 
 `/docs/README.md`
 
 ```yaml
 ---
 home: true
-heroImage: /space_invader.png
+heroImage: https://cdn-image.tsanfer.xyz/img/vuepress_githubpages_travisCI.svg
 actionText: 快速上手 →
 actionLink: /pages/思路.md
 features:
@@ -195,22 +207,137 @@ footer: MIT Licensed | Copyright © 2020 Tsanfer
 
 
 
-####  导航栏
+### 文档属性
 
 `/docs/.vuepress/config.js`
 
-```
+```js
 module.exports = {
-  themeConfig: {
-    nav: [
-      { text: 'Home', link: '/' },
-      { text: 'Guide', link: '/guide/' },
-      { text: 'External', link: 'https://google.com' },
-    ]
-  }
+    base: '/VuePress-GithubPages-TravisCI/',    //目录根地址，应与Github仓库名字相同
+    title: 'VuePress + GithubPages + TravisCI',    // 显示在左上角的网页名称以及首页在浏览器标签显示的title名称
+    description: '创建 VuePress + GithubPages + TravisCI 在线文档',    // meta 中的描述文字，用于SEO
+    head: [
+        ['link', 
+            { rel: 'icon', href: '/gamepad_game_128px.ico' }   //浏览器的标签栏的网页图标,基地址/docs/.vuepress/public
+        ],  
+    ],
 }
 ```
 
 
 
-####  侧边栏
+### markdown扩展
+
+`/docs/.vuepress/config.js`
+
+```js
+module.exports = {
+    markdown: {
+        lineNumbers: true,  //是否在每个代码块的左侧显示行号
+    },
+}
+```
+
+
+
+### 默认主题设置
+
+####  导航栏
+
+`/docs/.vuepress/config.js`
+
+```js
+module.exports = {
+	themeConfig: {
+		nav: [
+            //链接页面链接的根地址为/docs
+            { text: '思路', link: '/pages/思路.md' },
+            { text: '创建Github仓库', link: '/pages/创建Github仓库.md' },
+            { text: '配置VuePress', link: '/pages/配置VuePress.md' },
+            { text: '创建分支和Github pages', link: '/pages/创建分支和Github pages.md' },
+            { text: 'TravisCI生成和发布', link: '/pages/TravisCI生成和发布.md' },
+            { text: '博客', link: 'https://tsanfer.xyz' },
+        ],
+	},
+}
+```
+
+#### 侧边栏
+
+`/docs/.vuepress/config.js`
+
+```js
+module.exports = {
+	themeConfig: {
+        sidebarDepth: 2,    //侧边栏深度
+        sidebar: [
+            ['/pages/思路.md', '思路'],
+            ['/pages/创建Github仓库.md', '创建Github仓库'],
+            ['/pages/配置VuePress.md', '配置VuePress'],
+            ['/pages/创建分支和Github pages.md', '创建分支和Github pages'],
+            ['/pages/TravisCI生成和发布.md', 'TravisCI生成和发布'],
+        ],
+	},
+}
+```
+
+#### Git仓库
+
+`/docs/.vuepress/config.js`
+
+```js
+module.exports = {
+	 themeConfig: {
+		// 假定是 GitHub. 同时也可以是一个完整的 GitLab URL
+        repo: 'Tsanfer/VuePress-GithubPages-TravisCI',
+        // 自定义仓库链接文字。默认从 `themeConfig.repo` 中自动推断为
+        // "GitHub"/"GitLab"/"Bitbucket" 其中之一，或是 "Source"。
+        repoLabel: 'Github',
+        // 以下为可选的编辑链接选项
+        // 假如文档不是放在仓库的根目录下：
+        docsDir: 'docs/pages',
+        // 假如文档放在一个特定的分支下：
+        docsBranch: 'master',
+        // 默认是 false, 设置为 true 来启用
+        editLinks: true,
+        // 默认为 "Edit this page"
+        editLinkText: '在 Github 上编辑此页', 
+	},
+}
+```
+
+#### 其他
+
+`/docs/.vuepress/config.js`
+
+```js
+module.exports = {
+	 themeConfig: {
+		smoothScroll: true, //页面滚动效果
+        lastUpdated: '最后更新', // string | boolean
+     },
+}
+```
+
+
+
+### 插件
+
+`/docs/.vuepress/config.js`
+
+```js
+module.exports = {
+    plugins: [
+        '@vuepress/medium-zoom',    //zooming images like Medium（页面弹框居中显示）
+        '@vuepress/nprogress',  //网页加载进度条
+        '@vuepress/plugin-back-to-top', //返回页面顶部按钮
+    ]
+}
+```
+
+```markdown
+::: tip
+到这里其实已经完成配置了，可以执行 `yarn docs:dev` 来浏览配置的页面
+:::
+```
+

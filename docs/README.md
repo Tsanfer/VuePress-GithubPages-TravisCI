@@ -1,6 +1,6 @@
 ---
 home: true
-heroImage: /space_invader.png   #公共静态资源根地址为/docs/.vuepress/public
+heroImage: https://cdn-image.tsanfer.xyz/img/vuepress_githubpages_travisCI.svg
 actionText: 快速上手 →
 actionLink: /pages/思路.md
 features:

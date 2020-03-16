@@ -40,7 +40,7 @@ Your public key has been saved in /home/tsanfer/.ssh/test_key.pub.
 ssh -T git@github.com
 ```
 
-首先要设置Github账号的地址
+设置Github账号的地址
 
 ```shell
 git config --global user.name "username"
@@ -60,8 +60,18 @@ Hi Tsanfer! You've successfully authenticated, but GitHub does not provide shell
 用SSH的方式克隆仓库到本地
 
 ```shell
+# 选一个文件夹克隆仓库
+# 比如家目录
+cd ~
 git clone git@github.com:{Username}/{Repo}.git
 
 # 比如
+cd ~
 git clone git@github.com:Tsanfer/VuePress-GithubPages-TravisCI.git
 ```
+
+```shell
+# 克隆完之后的目录
+~/VuePress-GithubPages-TravisCI/
+```
+
