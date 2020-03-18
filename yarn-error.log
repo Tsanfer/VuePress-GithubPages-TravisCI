@@ -1,8 +1,8 @@
 Arguments: 
-  /usr/bin/node /usr/share/yarn/bin/yarn.js docs:dev
+  /usr/bin/node /usr/share/yarn/bin/yarn.js
 
 PATH: 
-  /usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/mnt/c/Program Files (x86)/Common Files/Intel/Shared Libraries/redist/intel64_win/compiler:/mnt/e/Program Files (x86)/NetSarang/Xftp 6/:/mnt/e/Program Files (x86)/STMicroelectronics/st_toolset/asm:/mnt/e/Program Files (x86)/NetSarang/Xshell 6/:/mnt/c/Program Files (x86)/Common Files/Oracle/Java/javapath:/mnt/c/Windows/system32:/mnt/c/Windows:/mnt/c/Windows/System32/Wbem:/mnt/c/Windows/System32/WindowsPowerShell/v1.0/:/mnt/c/Windows/System32/OpenSSH/:/mnt/e/Program Files/nodejs/:/mnt/e/Program Files/wsl-terminal-0.9.0/wsl-terminal:/mnt/c/ProgramData/chocolatey/bin:/mnt/e/Program Files (x86)/Yarn/bin/:/mnt/c/Program Files/dotnet/:/mnt/c/Users/Admin/AppData/Local/Microsoft/WindowsApps:/mnt/c/Users/Admin/AppData/Local/GitHubDesktop/bin:/mnt/e/intelFPGA/18.0/modelsim_ae/win32aloem:/mnt/e/intelFPGA/18.0/modelsim_ase/win32aloem:/mnt/e/Users/Admin/AppData/Local/Programs/Fiddler:/mnt/c/Users/Admin/AppData/Roaming/npm:/mnt/c/Users/Admin/AppData/Local/Yarn/bin
+  /usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/mnt/c/Program Files (x86)/Common Files/Intel/Shared Libraries/redist/intel64_win/compiler:/mnt/e/Program Files (x86)/NetSarang/Xftp 6/:/mnt/e/Program Files (x86)/STMicroelectronics/st_toolset/asm:/mnt/e/Program Files (x86)/NetSarang/Xshell 6/:/mnt/c/Program Files (x86)/Common Files/Oracle/Java/javapath:/mnt/c/Windows/system32:/mnt/c/Windows:/mnt/c/Windows/System32/Wbem:/mnt/c/Windows/System32/WindowsPowerShell/v1.0/:/mnt/c/Windows/System32/OpenSSH/:/mnt/e/Program Files/nodejs/:/mnt/e/Program Files/wsl-terminal-0.9.0/wsl-terminal:/mnt/c/ProgramData/chocolatey/bin:/mnt/e/Program Files (x86)/Yarn/bin/:/mnt/c/Program Files/dotnet/:/mnt/c/Users/Admin/AppData/Local/Microsoft/WindowsApps:/mnt/c/Users/Admin/AppData/Local/GitHubDesktop/bin:/mnt/e/intelFPGA/18.0/modelsim_ae/win32aloem:/mnt/e/intelFPGA/18.0/modelsim_ase/win32aloem:/mnt/e/Users/Admin/AppData/Local/Programs/Fiddler:/mnt/c/Users/Admin/AppData/Roaming/npm:/mnt/c/Users/Admin/AppData/Local/Yarn/bin:/mnt/d/Program Files/Microsoft VS Code/bin
 
 Yarn version: 
   1.22.4
@@ -14,7 +14,7 @@ Platform:
   linux x64
 
 Trace: 
-  SyntaxError: /mnt/k/Git_Bash/VuePress-GithubPages-TravisCI/package.json: Unexpected string in JSON at position 340
+  SyntaxError: /mnt/k/Git_Bash/VuePress-GithubPages-TravisCI/package.json: Unexpected string in JSON at position 92
       at JSON.parse (<anonymous>)
       at /usr/share/yarn/lib/cli.js:1625:59
       at Generator.next (<anonymous>)
@@ -24,18 +24,32 @@ Trace:
 
 npm manifest: 
   {
+    "author": "Tsanfer",
     "dependencies": {
+      "@vuepress/plugin-nprogress": "^1.4.0"
       "@vuepress/plugin-active-header-links": "^1.3.1",
+      "@vuepress/plugin-back-to-top": "^1.3.1",
       "@vuepress/plugin-medium-zoom": "^1.3.1",
       "@vuepress/plugin-nprogress": "^1.3.1",
-      "@vuepress/plugin-back-to-top": "^1.3.1",
       "vuepress": "^1.3.1"
+    },
+    "description": "创建VuePress-GithubPages-TravisCI在线文档",
+    "homepage": "https://github.com/Tsanfer/VuePress-GithubPages-TravisCI#readme",
+    "keywords": [
+      "VuePress",
+      "Github Pages",
+      "Travis CI"
+    ],
+    "license": "MIT",
+    "private": false,
+    "repository": {
+      "type": "git",
+      "url": "git+https://github.com/Tsanfer/VuePress-GithubPages-TravisCI.git"
     },
     "scripts": {
       "docs:build": "vuepress build docs",
       "docs:dev": "vuepress dev docs"
     }
-    "license": "MIT"
   }
 
 yarn manifest: 

@@ -57,6 +57,7 @@ module.exports = {
         '@vuepress/medium-zoom',    //zooming images like Medium（页面弹框居中显示）
         '@vuepress/nprogress',  //网页加载进度条
         '@vuepress/plugin-back-to-top', //返回页面顶部按钮
-		'@vuepress/nprogress',	//提示阅读进度
+		'@vuepress/nprogress',	//提示加载进度
+		'reading-progress', //提示阅读进度
     ]
 }
