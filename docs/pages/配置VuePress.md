@@ -137,7 +137,7 @@ vuepress build .
 │   │   ├── public     //存放静态文件，如图片等
 │   │   └── config.js     //设定顶部导航栏、侧边导航栏等项目配置的核心文件
 │   ├── pages      //存放markdown页面的文件
-│   ├── README.md     //vuepress首页展示用的markdown文件
+│   └── README.md     //vuepress首页展示用的markdown文件
 ├── deploy.sh     //用于编写TravisCI上传、发布的脚本文件
 ├── LISENSE     //许可证文件
 ├── package.json     //Node.js项目描述文件
