@@ -19,4 +19,4 @@ deploy:
     branch: master #这里指的是部署前的源文件分支
 
 after_success:
-    bash <(curl -s https://codecov.io/bash) 
+    - bash <(curl -s https://codecov.io/bash) 
