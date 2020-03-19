@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.com/Tsanfer/VuePress-GithubPages-TravisCI.svg?branch=master)](https://travis-ci.com/Tsanfer/VuePress-GithubPages-TravisCI)
+
 > [最新博客链接](https://tsanfer.xyz/创建-vuepress-githubpages-travisci-在线文档)
 
 > [VuePress 在线文档链接_Github Pages](https://tsanfer.github.io/VuePress-GithubPages-TravisCI/)
