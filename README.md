@@ -1,10 +1,13 @@
 [![Build Status](https://travis-ci.com/Tsanfer/VuePress-GithubPages-TravisCI.svg?branch=master)](https://travis-ci.com/Tsanfer/VuePress-GithubPages-TravisCI)
 
+[![License: CC BY-SA 4.0](https://img.shields.io/badge/License-CC%20BY--SA%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by-sa/4.0/)
+
+
 > [最新博客链接](https://tsanfer.xyz/创建-vuepress-githubpages-travisci-在线文档)
 
 > [VuePress 在线文档链接_Github Pages](https://tsanfer.github.io/VuePress-GithubPages-TravisCI/)
 
-> **[VuePress 在线文档链接_博客服务器](https://tsanfer.github.io/VuePress-GithubPages-TravisCI/)（如果上面进不去，可以进这个，服务器在阿里云）**
+> **[VuePress 在线文档链接_博客服务器](https://tsanfer.xyz/VuePress-GithubPages-TravisCI/)（如果上面进不去，可以进这个，服务器在阿里云）**
 
 > [Github链接](https://github.com/Tsanfer/VuePress-GithubPages-TravisCI)
 
