@@ -17,3 +17,5 @@ deploy:
   keep_history: true
   on:
     branch: master #这里指的是部署前的源文件分支
+    
+    

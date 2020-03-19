@@ -1,6 +1,4 @@
-[![Build Status](https://travis-ci.com/Tsanfer/VuePress-GithubPages-TravisCI.svg?branch=master)](https://travis-ci.com/Tsanfer/VuePress-GithubPages-TravisCI)
-
-[![License: CC BY-SA 4.0](https://img.shields.io/badge/License-CC%20BY--SA%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by-sa/4.0/)
+[![Build Status](https://travis-ci.com/Tsanfer/VuePress-GithubPages-TravisCI.svg?branch=master)](https://travis-ci.com/Tsanfer/VuePress-GithubPages-TravisCI)[![License: CC BY-SA 4.0](https://img.shields.io/badge/License-CC%20BY--SA%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by-sa/4.0/)
 
 
 > [最新博客链接](https://tsanfer.xyz/创建-vuepress-githubpages-travisci-在线文档)
@@ -31,7 +29,7 @@ VuePress 在本地完成项目的源文件，推送至 Github 触发 Travis CI �
 
 ## 过程
 
-1. 将 VuePress 工程上传到`master`分支
+1. 在本地创建配置好 VuePress 工程后上传到`master`分支
 2. 上传成功后触发 TravisCI 开始自动构建
 3. 构建完成后将最终页面推送到`gh-pages`分支
 
