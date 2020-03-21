@@ -18,19 +18,19 @@ module.exports = {
         //导航栏
         nav: [
             //链接页面链接的根地址为/docs
-            { text: '思路', link: '/pages/思路.md' },
-            { text: '创建Github仓库', link: '/pages/创建Github仓库.md' },
-            { text: '配置VuePress', link: '/pages/配置VuePress.md' },
-            { text: 'TravisCI生成和发布', link: '/pages/TravisCI生成和发布.md' },
+            { text: '思路', link: '/pages/flow.md' },
+            { text: '创建Github仓库', link: '/pages/Github.md' },
+            { text: '配置VuePress', link: '/pages/VuePress.md' },
+            { text: 'TravisCI生成和发布', link: '/pages/TravisCI.md' },
             { text: '博客', link: 'https://tsanfer.xyz' },
         ],
         sidebarDepth: 2,    //侧边栏深度
         //侧边栏
         sidebar: [
-            ['/pages/思路.md', '思路'],
-            ['/pages/创建Github仓库.md', '创建Github仓库'],
-            ['/pages/配置VuePress.md', '配置VuePress'],
-            ['/pages/TravisCI生成和发布.md', 'TravisCI生成和发布'],
+            ['/pages/flow.md', '思路'],
+            ['/pages/Github.md', '创建Github仓库'],
+            ['/pages/VuePress.md', '配置VuePress'],
+            ['/pages/TravisCI.md', 'TravisCI生成和发布'],
         ],
 
         // 假定是 GitHub. 同时也可以是一个完整的 GitLab URL
