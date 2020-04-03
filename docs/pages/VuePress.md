@@ -349,19 +349,19 @@ module.exports = {
     //导航栏
     nav: [
       //链接页面链接的根地址为/docs
-      { text: "思路", link: "/pages/思路.md" },
-      { text: "创建Github仓库", link: "/pages/创建Github仓库.md" },
-      { text: "配置VuePress", link: "/pages/配置VuePress.md" },
-      { text: "TravisCI生成和发布", link: "/pages/TravisCI生成和发布.md" },
+      { text: "思路", link: "/pages/flow.md" },
+      { text: "创建Github仓库", link: "/pages/Github.md" },
+      { text: "配置VuePress", link: "/pages/VuePress.md" },
+      { text: "TravisCI生成和发布", link: "/pages/TravisCI.md" },
       { text: "博客", link: "https://tsanfer.xyz" }
     ],
     sidebarDepth: 2, //侧边栏深度
     //侧边栏
     sidebar: [
-      ["/pages/思路.md", "思路"],
-      ["/pages/创建Github仓库.md", "创建Github仓库"],
-      ["/pages/配置VuePress.md", "配置VuePress"],
-      ["/pages/TravisCI生成和发布.md", "TravisCI生成和发布"]
+      ["/pages/flow.md", "思路"],
+      ["/pages/Github.md", "创建Github仓库"],
+      ["/pages/VuePress.md", "配置VuePress"],
+      ["/pages/TravisCI.md", "TravisCI生成和发布"]
     ],
 
     // 假定是 GitHub. 同时也可以是一个完整的 GitLab URL
@@ -371,7 +371,7 @@ module.exports = {
     repoLabel: "Github",
     // 以下为可选的编辑链接选项
     // 假如文档不是放在仓库的根目录下：
-    docsDir: "docs/pages",
+    docsDir: "docs",
     // 假如文档放在一个特定的分支下：
     docsBranch: "master",
     // 默认是 false, 设置为 true 来启用
@@ -387,7 +387,10 @@ module.exports = {
   plugins: [
     "@vuepress/medium-zoom", //zooming images like Medium（页面弹框居中显示）
     "@vuepress/nprogress", //网页加载进度条
-    "@vuepress/plugin-back-to-top" //返回页面顶部按钮
+    "@vuepress/back-to-top", //返回页面顶部按钮
+    "@vuepress/nprogress", //提示加载进度
+    "reading-progress" //提示阅读进度
   ]
 };
+
 ```
