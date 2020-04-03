@@ -1,23 +1,23 @@
-## 安装VuePress
+## 安装 VuePress
 
-::: warning  注意
+::: warning 注意
 请确保你的 Node.js 版本 >= 8。
 :::
 
-### 安装yarn
+### 安装 yarn
 
-> 也可以安装npm
+> 也可以安装 npm
 
 #### Debian / Ubuntu
 
-在 Debian 或 Ubuntu 上，需要用yarn的 Debian 包仓库来安装 Yarn。 首先需要配置仓库：
+在 Debian 或 Ubuntu 上，需要用 yarn 的 Debian 包仓库来安装 Yarn。 首先需要配置仓库：
 
 ```shell
 curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | sudo apt-key add -
 echo "deb https://dl.yarnpkg.com/debian/ stable main" | sudo tee /etc/apt/sources.list.d/yarn.list
 ```
 
-更新库和下载yarn
+更新库和下载 yarn
 
 ```shell
 sudo apt-get update && sudo apt-get install yarn
@@ -32,7 +32,7 @@ $ yarn --version
 
 #### Windows
 
-直接下安装包，然后在CMD或者Powershell里运行
+直接下安装包，然后在 CMD 或者 Powershell 里运行
 
 #### 更换国内的源
 
@@ -49,7 +49,7 @@ https://registry.yarnpkg.com
 yarn config set registry https://registry.npm.taobao.org
 ```
 
-### 安装VuePress
+### 安装 VuePress
 
 ```shell
 # 先进入安装目录，就是刚刚克隆的仓库
@@ -79,9 +79,7 @@ success [00:00:17] Build 471ee0 finished in 8465 ms!
 # 生成的地址 http://localhost:8081/
 ```
 
-用浏览器打开vuepress生成的网页的地址
-
-
+用浏览器打开 vuepress 生成的网页的地址
 
 或者构建静态文件
 
@@ -92,11 +90,7 @@ vuepress build .
 
 但会因为路径不对，网页的样式显示不出来
 
-
-
-
-
-### VuePress目录结构
+### VuePress 目录结构
 
 官方给的结构
 
@@ -118,12 +112,12 @@ vuepress build .
 > │   │   │   └── ssr.html
 > │   │   ├── config.js (可选的)
 > │   │   └── enhanceApp.js (可选的)
-> │   │ 
+> │   │
 > │   ├── README.md
 > │   ├── guide
 > │   │   └── README.md
 > │   └── config.md
-> │ 
+> │
 > └── package.json
 > ```
 
@@ -144,11 +138,9 @@ vuepress build .
 └── .travis.yml	//Travis CI 自动部署文件
 ```
 
-
-
 ## 配置依赖和脚本
 
-### 配置package.json
+### 配置 package.json
 
 在 `package.json` 里加一些脚本和后面要用的依赖:
 
@@ -181,11 +173,9 @@ yarn docs:dev # 或者：npm run docs:dev
 yarn docs:build # 或者：npm run docs:build
 ```
 
-
-
 ## 页面的设置
 
-###  首页
+### 首页
 
 `/docs/README.md`
 
@@ -196,17 +186,16 @@ heroImage: https://cdn-image.tsanfer.xyz/img/vuepress_githubpages_travisCI.svg
 actionText: 快速上手 →
 actionLink: /pages/思路.md
 features:
-- title: 简洁至上
-  details: 以 Markdown 为中心的项目结构，以最少的配置帮助你专注于写作。
-- title: Vue驱动
-  details: 享受 Vue + webpack 的开发体验，在 Markdown 中使用 Vue 组件，同时可以使用 Vue 来开发自定义主题。
-- title: 高性能
-  details: VuePress 为每个页面预渲染生成静态的 HTML，同时在页面被加载的时候，将作为 SPA 运行。
+  - title: 简洁至上
+    details: 以 Markdown 为中心的项目结构，以最少的配置帮助你专注于写作。
+  - title: Vue驱动
+    details: 享受 Vue + webpack 的开发体验，在 Markdown 中使用 Vue 组件，同时可以使用 Vue 来开发自定义主题。
+  - title: 高性能
+    details: VuePress 为每个页面预渲染生成静态的 HTML，同时在页面被加载的时候，将作为 SPA 运行。
 footer: MIT Licensed | Copyright © 2020 Tsanfer
 ---
+
 ```
-
-
 
 ### 文档属性
 
@@ -214,53 +203,49 @@ footer: MIT Licensed | Copyright © 2020 Tsanfer
 
 ```js
 module.exports = {
-    base: '/VuePress-GithubPages-TravisCI/',    //目录根地址，应与Github仓库名字相同
-    title: 'VuePress + GithubPages + TravisCI',    // 显示在左上角的网页名称以及首页在浏览器标签显示的title名称
-    description: '创建 VuePress + GithubPages + TravisCI 在线文档',    // meta 中的描述文字，用于SEO
-    head: [
-        ['link', 
-            { rel: 'icon', href: '/gamepad_game_128px.ico' }   //浏览器的标签栏的网页图标,基地址/docs/.vuepress/public
-        ],  
-    ],
-}
+  base: "/VuePress-GithubPages-TravisCI/", //目录根地址，应与Github仓库名字相同
+  title: "VuePress + GithubPages + TravisCI", // 显示在左上角的网页名称以及首页在浏览器标签显示的title名称
+  description: "创建 VuePress + GithubPages + TravisCI 在线文档", // meta 中的描述文字，用于SEO
+  head: [
+    [
+      "link",
+      { rel: "icon", href: "/gamepad_game_128px.ico" } //浏览器的标签栏的网页图标,基地址/docs/.vuepress/public
+    ]
+  ]
+};
 ```
 
-
-
-### markdown扩展
+### markdown 扩展
 
 `/docs/.vuepress/config.js`
 
 ```js
 module.exports = {
-    markdown: {
-        lineNumbers: true,  //是否在每个代码块的左侧显示行号
-    },
-}
+  markdown: {
+    lineNumbers: true //是否在每个代码块的左侧显示行号
+  }
+};
 ```
-
-
 
 ### 默认主题设置
 
-####  导航栏
+#### 导航栏
 
 `/docs/.vuepress/config.js`
 
 ```js
 module.exports = {
-	themeConfig: {
-		nav: [
-            //链接页面链接的根地址为/docs
-            { text: '思路', link: '/pages/思路.md' },
-            { text: '创建Github仓库', link: '/pages/创建Github仓库.md' },
-            { text: '配置VuePress', link: '/pages/配置VuePress.md' },
-            { text: '创建分支和Github pages', link: '/pages/创建分支和Github pages.md' },
-            { text: 'TravisCI生成和发布', link: '/pages/TravisCI生成和发布.md' },
-            { text: '博客', link: 'https://tsanfer.xyz' },
-        ],
-	},
-}
+  themeConfig: {
+    nav: [
+      //链接页面链接的根地址为/docs
+      { text: "思路", link: "/pages/flow.md" },
+      { text: "创建Github仓库", link: "/pages/Github.md" },
+      { text: "配置VuePress", link: "/pages/VuePress.md" },
+      { text: "TravisCI生成和发布", link: "/pages/TravisCI.md" },
+      { text: "博客", link: "https://tsanfer.xyz" }
+    ]
+  }
+};
 ```
 
 #### 侧边栏
@@ -269,42 +254,41 @@ module.exports = {
 
 ```js
 module.exports = {
-	themeConfig: {
-        sidebarDepth: 2,    //侧边栏深度
-        sidebar: [
-            ['/pages/思路.md', '思路'],
-            ['/pages/创建Github仓库.md', '创建Github仓库'],
-            ['/pages/配置VuePress.md', '配置VuePress'],
-            ['/pages/创建分支和Github pages.md', '创建分支和Github pages'],
-            ['/pages/TravisCI生成和发布.md', 'TravisCI生成和发布'],
-        ],
-	},
-}
+  themeConfig: {
+    sidebarDepth: 2, //侧边栏深度
+    sidebar: [
+      ["/pages/flow.md", "思路"],
+      ["/pages/Github.md", "创建Github仓库"],
+      ["/pages/VuePress.md", "配置VuePress"],
+      ["/pages/TravisCI.md", "TravisCI生成和发布"]
+    ]
+  }
+};
 ```
 
-#### Git仓库
+#### Git 仓库
 
 `/docs/.vuepress/config.js`
 
 ```js
 module.exports = {
-	 themeConfig: {
-		// 假定是 GitHub. 同时也可以是一个完整的 GitLab URL
-        repo: 'Tsanfer/VuePress-GithubPages-TravisCI',
-        // 自定义仓库链接文字。默认从 `themeConfig.repo` 中自动推断为
-        // "GitHub"/"GitLab"/"Bitbucket" 其中之一，或是 "Source"。
-        repoLabel: 'Github',
-        // 以下为可选的编辑链接选项
-        // 假如文档不是放在仓库的根目录下：
-        docsDir: 'docs/pages',
-        // 假如文档放在一个特定的分支下：
-        docsBranch: 'master',
-        // 默认是 false, 设置为 true 来启用
-        editLinks: true,
-        // 默认为 "Edit this page"
-        editLinkText: '在 Github 上编辑此页', 
-	},
-}
+  themeConfig: {
+    // 假定是 GitHub. 同时也可以是一个完整的 GitLab URL
+    repo: "Tsanfer/VuePress-GithubPages-TravisCI",
+    // 自定义仓库链接文字。默认从 `themeConfig.repo` 中自动推断为
+    // "GitHub"/"GitLab"/"Bitbucket" 其中之一，或是 "Source"。
+    repoLabel: "Github",
+    // 以下为可选的编辑链接选项
+    // 假如文档不是放在仓库的根目录下：
+    docsDir: "docs/pages",
+    // 假如文档放在一个特定的分支下：
+    docsBranch: "master",
+    // 默认是 false, 设置为 true 来启用
+    editLinks: true,
+    // 默认为 "Edit this page"
+    editLinkText: "在 Github 上编辑此页"
+  }
+};
 ```
 
 #### 其他
@@ -313,14 +297,12 @@ module.exports = {
 
 ```js
 module.exports = {
-	 themeConfig: {
-		smoothScroll: true, //页面滚动效果
-        lastUpdated: '最后更新', // string | boolean
-     },
-}
+  themeConfig: {
+    smoothScroll: true, //页面滚动效果
+    lastUpdated: "最后更新" // string | boolean
+  }
+};
 ```
-
-
 
 ### 插件
 
@@ -328,84 +310,84 @@ module.exports = {
 
 ```js
 module.exports = {
-    plugins: [
-        '@vuepress/medium-zoom',    //zooming images like Medium（页面弹框居中显示）
-        '@vuepress/nprogress',  //网页加载进度条
-        '@vuepress/plugin-back-to-top', //返回页面顶部按钮
-    ]
-}
+  plugins: [
+    "@vuepress/medium-zoom", //zooming images like Medium（页面弹框居中显示）
+    "@vuepress/nprogress", //网页加载进度条
+    "@vuepress/plugin-back-to-top" //返回页面顶部按钮
+  ]
+};
 ```
 
 ::: tip 提示
 到这里其实已经完成配置了，可以执行 `yarn docs:dev` 来浏览配置的页面，
 
-只是由于没有对应的 md 文件，打开的链接都会404
+只是由于没有对应的 md 文件，打开的链接都会 404
 
 :::
 
-### config.js所有内容
+### config.js 所有内容
 
 ```js
 module.exports = {
-    base: '/VuePress-GithubPages-TravisCI/',    //目录根地址，应与Github仓库名字相同
-    title: 'VuePress + GithubPages + TravisCI',    // 显示在左上角的网页名称以及首页在浏览器标签显示的title名称
-    description: '创建 VuePress + GithubPages + TravisCI 在线文档',    // meta 中的描述文字，用于SEO
-    head: [
-        ['link', 
-            { rel: 'icon', href: '/gamepad_game_128px.ico' }   //浏览器的标签栏的网页图标,基地址/docs/.vuepress/public
-        ],  
+  base: "/VuePress-GithubPages-TravisCI/", //目录根地址，应与Github仓库名字相同
+  title: "VuePress + GithubPages + TravisCI", // 显示在左上角的网页名称以及首页在浏览器标签显示的title名称
+  description: "创建 VuePress + GithubPages + TravisCI 在线文档", // meta 中的描述文字，用于SEO
+  head: [
+    [
+      "link",
+      { rel: "icon", href: "/gamepad_game_128px.ico" } //浏览器的标签栏的网页图标,基地址/docs/.vuepress/public
+    ]
+  ],
+
+  //markdown扩展
+  markdown: {
+    lineNumbers: true //是否在每个代码块的左侧显示行号
+  },
+
+  //默认主题配置
+  themeConfig: {
+    //导航栏
+    nav: [
+      //链接页面链接的根地址为/docs
+      { text: "思路", link: "/pages/思路.md" },
+      { text: "创建Github仓库", link: "/pages/创建Github仓库.md" },
+      { text: "配置VuePress", link: "/pages/配置VuePress.md" },
+      { text: "TravisCI生成和发布", link: "/pages/TravisCI生成和发布.md" },
+      { text: "博客", link: "https://tsanfer.xyz" }
+    ],
+    sidebarDepth: 2, //侧边栏深度
+    //侧边栏
+    sidebar: [
+      ["/pages/思路.md", "思路"],
+      ["/pages/创建Github仓库.md", "创建Github仓库"],
+      ["/pages/配置VuePress.md", "配置VuePress"],
+      ["/pages/TravisCI生成和发布.md", "TravisCI生成和发布"]
     ],
 
-    //markdown扩展
-    markdown: {
-        lineNumbers: true,  //是否在每个代码块的左侧显示行号
-    },
+    // 假定是 GitHub. 同时也可以是一个完整的 GitLab URL
+    repo: "Tsanfer/VuePress-GithubPages-TravisCI",
+    // 自定义仓库链接文字。默认从 `themeConfig.repo` 中自动推断为
+    // "GitHub"/"GitLab"/"Bitbucket" 其中之一，或是 "Source"。
+    repoLabel: "Github",
+    // 以下为可选的编辑链接选项
+    // 假如文档不是放在仓库的根目录下：
+    docsDir: "docs/pages",
+    // 假如文档放在一个特定的分支下：
+    docsBranch: "master",
+    // 默认是 false, 设置为 true 来启用
+    editLinks: true,
+    // 默认为 "Edit this page"
+    editLinkText: "在 Github 上编辑此页",
 
-    //默认主题配置
-    themeConfig: {
-        //导航栏
-        nav: [
-            //链接页面链接的根地址为/docs
-            { text: '思路', link: '/pages/思路.md' },
-            { text: '创建Github仓库', link: '/pages/创建Github仓库.md' },
-            { text: '配置VuePress', link: '/pages/配置VuePress.md' },
-            { text: 'TravisCI生成和发布', link: '/pages/TravisCI生成和发布.md' },
-            { text: '博客', link: 'https://tsanfer.xyz' },
-        ],
-        sidebarDepth: 2,    //侧边栏深度
-        //侧边栏
-        sidebar: [
-            ['/pages/思路.md', '思路'],
-            ['/pages/创建Github仓库.md', '创建Github仓库'],
-            ['/pages/配置VuePress.md', '配置VuePress'],
-            ['/pages/TravisCI生成和发布.md', 'TravisCI生成和发布'],
-        ],
+    smoothScroll: true, //页面滚动效果
+    lastUpdated: "最后更新" // string | boolean
+  },
 
-        // 假定是 GitHub. 同时也可以是一个完整的 GitLab URL
-        repo: 'Tsanfer/VuePress-GithubPages-TravisCI',
-        // 自定义仓库链接文字。默认从 `themeConfig.repo` 中自动推断为
-        // "GitHub"/"GitLab"/"Bitbucket" 其中之一，或是 "Source"。
-        repoLabel: 'Github',
-        // 以下为可选的编辑链接选项
-        // 假如文档不是放在仓库的根目录下：
-        docsDir: 'docs/pages',
-        // 假如文档放在一个特定的分支下：
-        docsBranch: 'master',
-        // 默认是 false, 设置为 true 来启用
-        editLinks: true,
-        // 默认为 "Edit this page"
-        editLinkText: '在 Github 上编辑此页',
-
-        smoothScroll: true, //页面滚动效果
-        lastUpdated: '最后更新', // string | boolean
-    },
-
-    //插件
-    plugins: [
-        '@vuepress/medium-zoom',    //zooming images like Medium（页面弹框居中显示）
-        '@vuepress/nprogress',  //网页加载进度条
-        '@vuepress/plugin-back-to-top', //返回页面顶部按钮
-    ]
-}
+  //插件
+  plugins: [
+    "@vuepress/medium-zoom", //zooming images like Medium（页面弹框居中显示）
+    "@vuepress/nprogress", //网页加载进度条
+    "@vuepress/plugin-back-to-top" //返回页面顶部按钮
+  ]
+};
 ```
-
