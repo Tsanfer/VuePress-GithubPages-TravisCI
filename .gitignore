@@ -2,3 +2,5 @@
 docs/.vuepress/dist/
 node_modules/
 *.log
+yarn.lock
+yarn-error.log
