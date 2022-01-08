@@ -1,10 +1,10 @@
 ## 创建gh-pages分支
 
-![](https://cdn-image.tsanfer.xyz/img/20200316170443.png)
+![](https://cdn-oss.tsanfer.xyz/image/20200316170443.png)
 
 这时Github已经自动部署gh-pages分支为Github pages的生成源
 
-![](https://cdn-image.tsanfer.xyz/img/20200316170600.png)
+![](https://cdn-oss.tsanfer.xyz/image/20200316170600.png)
 
 
 
@@ -63,7 +63,7 @@ cd -
 
 上面的 git 地址其实就是仓库的SSH地址
 
-![](https://cdn-image.tsanfer.xyz/img/20200316171506.png)
+![](https://cdn-oss.tsanfer.xyz/image/20200316171506.png)
 
 
 
@@ -114,17 +114,17 @@ deploy:
 
 在 Settings --> Developer settings --> Personal access tokens 右上角 Generate new toekn 生成新Token 名字随便写，权限不清楚的可以全部选上，也可以参考我下面的配置
 
-![](https://cdn-image.tsanfer.xyz/img/20200316174659.png)
+![](https://cdn-oss.tsanfer.xyz/image/20200316174659.png)
 
-![](https://cdn-image.tsanfer.xyz/img/20200316174841.png)
+![](https://cdn-oss.tsanfer.xyz/image/20200316174841.png)
 
-![](https://cdn-image.tsanfer.xyz/img/20200316175236.png)
+![](https://cdn-oss.tsanfer.xyz/image/20200316175236.png)
 
 ::: warning 注意
 下面的口令只出现一次，需及时保存
 :::
 
-![](https://cdn-image.tsanfer.xyz/img/20200316175539.png)
+![](https://cdn-oss.tsanfer.xyz/image/20200316175539.png)
 
 
 
@@ -134,11 +134,11 @@ deploy:
 
 在 Travis CI 里面 Settings ---> Repositories 点击  Manage repositories on GitHub 
 
-![](https://cdn-image.tsanfer.xyz/img/20200316175949.png)
+![](https://cdn-oss.tsanfer.xyz/image/20200316175949.png)
 
 选择给权限的仓库，为了方便也可以把所有仓库的权限都给了
 
-![](https://cdn-image.tsanfer.xyz/img/20200316180225.png)
+![](https://cdn-oss.tsanfer.xyz/image/20200316180225.png)
 
 
 
@@ -167,7 +167,7 @@ deploy:
 - NAME : GITHUB_TOKEN （刚刚的 `github_token: $GITHUB_TOKEN` 这个变量）
 - VALUE : \*\*\*\*刚刚的 Token\*\*\*\*
 
-![](https://cdn-image.tsanfer.xyz/img/20200316181315.png)
+![](https://cdn-oss.tsanfer.xyz/image/20200316181315.png)
 
 
 
@@ -188,6 +188,6 @@ git push -f git@github.com:{Username}/{Repo}.git master
 
 如果 Travis CI 触发成功构建没有问题的话就完成了
 
-![](https://cdn-image.tsanfer.xyz/img/20200316183049.png)
+![](https://cdn-oss.tsanfer.xyz/image/20200316183049.png)
 
 > 本文由[Tsanfer's Blog](https://tsanfer.xyz) 发布！ 

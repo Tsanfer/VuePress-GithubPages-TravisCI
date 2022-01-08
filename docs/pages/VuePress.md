@@ -182,7 +182,7 @@ yarn docs:build # 或者：npm run docs:build
 ```yaml
 ---
 home: true
-heroImage: https://cdn-image.tsanfer.xyz/img/vuepress_githubpages_travisCI.svg
+heroImage: https://cdn-oss.tsanfer.xyz/image/vuepress_githubpages_travisCI.svg
 actionText: 快速上手 →
 actionLink: /pages/思路.md
 features:

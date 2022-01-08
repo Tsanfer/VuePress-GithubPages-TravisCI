@@ -8,7 +8,7 @@
 
 ## 最终效果
 
-![](https://cdn-image.tsanfer.xyz/img/20200316184115.png)
+![](https://cdn-oss.tsanfer.xyz/image/20200316184115.png)
 
 
 
